@@ -1,16 +1,23 @@
-n=int(input())
-r=b=c=0
-while n>0:
-    r=n%10
-    b+=pow(r,2)
-    n=n//10
-    if(n==0):
-        if(b>0 and b<=9):
+def happy(a):
+    su=0
+    while (1):
+        su=0
+        while a>0:
+            rem=a%10
+            su+=rem**2
+            a//=10
+        if su<10:
             break
         else:
-            n=b
-            b=0
-if(b==1 or b==7):
-    print(True)
+            a=su
+            continue
+    if su==1 or su==7:
+        return 1
+    else:
+        return 0
+a=int(input())
+res=happy(a)
+if res==1:
+    print("True")
 else:
-    print(False)
+    print("False")
