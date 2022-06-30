@@ -1,18 +1,16 @@
-s=input()
-v=0
-v=len(s)
-for i in range(v):
-    x=0
-    for j in range(v):
-        if(i!=j):
-            if(s[i]==s[j]):
-                x+=1
-                break
-    if(x>0):
-        break
+a=input()
+c=f=0
+for i in a:
+    c=0
+    for j in a:
+        if i==j:
+            c+=1
+    if c==1:
+        f=1
     else:
-        i+=1
-if(x==0):
-    print('Unique Number')
+        f=0
+        break
+if f==1:
+    print("Unique Number")
 else:
-    print('Not Unique Number')
+    print("Not Unique Number")
