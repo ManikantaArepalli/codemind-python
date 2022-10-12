@@ -1,11 +1,14 @@
 n=int(input())
-a=list(map(int,input().split()))
-c=int(input())
-b=[]
-for i in a:
-    if i not in b and a.count(i)==c:
-        b.append(i)
-if len(b)==0:
-    print(-1)
+l=list(map(int,input().split()))
+k=int(input())
+a=[]
+flag=0
+for i in set(l):
+    c=l.count(i)
+    if c==k:
+        a.append(i)
+        flag=1
+if flag==1:
+    print(*a)
 else:
-    print(*b)
+    print(-1)
