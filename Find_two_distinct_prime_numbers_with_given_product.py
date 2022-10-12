@@ -1,24 +1,17 @@
-def prime(a):
-    c=0
-    for i in range(1,a):
-        if(a%i==0):
-            c+=1
-    if(c==1):
-        return 1
+def is_prime(n):
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
+            return 0
     else:
-        return 0
-a=int(input())
-c=0
-for i in range(1,a):
-    if(prime(i)==1):
-        for j in range(1,a):
-            if(prime(j)==1):
-                if(i!=j):
-                    if(i*j==a):
-                        c=1
-                        print(i,j)
-                        break
-        if(c==1):
-            break
-if(c==0):
-    print("-1")
+        return 1
+n=int(input())
+flag=0
+for i in range(int(n**0.5)+1):
+    if is_prime(i):
+        for j in range(int(n**0.5)+1,n):
+            if is_prime(j):
+                if i*j==n:
+                    print(i,j)
+                    flag=1
+if flag==0:
+    print(-1)
