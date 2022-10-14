@@ -1,12 +1,10 @@
 n,m=map(int,input().split())
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
-c=[]
-p=0
-q=0
+l=list(map(int,input().split()))
+p=list(map(int,input().split()))
+a=[]
+for i in l:
+    if i not in a:
+        a.append(i)
 for i in a:
-    if(i in b and i not in c):
-        c+=[i]
-        p+=1
-for j in c:
-    print(j,end=' ')
+    if i in p:
+        print(i,end=' ')
