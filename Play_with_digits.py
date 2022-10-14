@@ -1,13 +1,7 @@
-def rev(n):
-    rev=0
-    while n:
-        r=n%10
-        n//=10
-        rev+=r
-    return rev
 n=int(input())
-a=list(map(int,input().split()))
-s=0
+l=list(map(int,input().split()))
+Sum=0
+a=[sum(map(int,list(str(i)))) for i in l]
 for i in a:
-    s+=rev(i)
-print(s)
+    Sum+=i
+print(Sum)
