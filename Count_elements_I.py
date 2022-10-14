@@ -1,8 +1,8 @@
 a,b=map(int,input().split())
-s=list(map(int,input().strip().split()))
-d=list(map(int,input().strip().split()))
-k=[]
-for i in s:
-  if i in d:
-      k.append(i)
-print(len(set(k)))
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+c=0
+for i in set(l1):
+    if i in set(l2):
+        c+=1
+print(c)
