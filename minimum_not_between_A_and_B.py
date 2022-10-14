@@ -1,14 +1,14 @@
 n=int(input())
-a=list(map(int,input().split()))
-x,y=map(int,input().split())
-c=0
-d=[]
-for i in range(0,n):
-    if a[i]>=x and a[i]<=y:
-        pass
-    else:
-        d.append(a[i])
-if len(d)==0:
-    print('-1')
+l=list(map(int,input().split()))
+k,m=map(int,input().split())
+l.sort()
+a=[]
+flag=0
+for i in l:
+    if i<k or i>m:
+        a.append(i)
+        flag=1
+if flag:
+    print(min(a))
 else:
-    print(min(d))
+    print(-1)
