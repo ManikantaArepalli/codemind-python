@@ -1,8 +1,11 @@
 n=int(input())
-a=list(map(int,input().split()))
-m=max(a)
-c=0
-for i in a:
-    if len(str(m))==len(str(i)):
-        c+=1
-print(c)
+l=list(map(int,input().split()))
+a=[]
+for i in l:
+    if i>=0:
+        a.append(len(str(i)))
+    else:
+        i=-1
+        a.append(len(str(i)))
+k=max(a)
+print(a.count(k))
