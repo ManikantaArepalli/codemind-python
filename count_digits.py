@@ -1,8 +1,10 @@
 n=int(input())
-a=list(map(int,input().split()))
-for i in a:
-    x=str(i)
-    p=len(x)
-    if(i<0):
-        p-=1
-    print(p,end=' ')
+l=list(map(int,input().split()))
+a=[]
+for i in l:
+    if i>=0:
+        a.append(len(str(i)))
+    else:
+        i=-i
+        a.append(len(str(i)))
+print(*a)
