@@ -1,9 +1,10 @@
-a,b=map(int,input().split())
+n,k=map(int,input().split())
 l=list(map(int,input().split()))
-x=0
+a=[]
 for i in l:
-    i=abs(i)
-    i=str(i)
-    if len(i)==b:
-        x+=1
-print(x)
+    if i>=0:
+        a.append(len(str(i)))
+    else:
+        i=-1
+        a.append(len(str(i)))
+print(a.count(k))
